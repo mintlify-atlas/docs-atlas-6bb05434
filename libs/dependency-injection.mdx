@@ -1,0 +1,108 @@
+---
+title: "Dependency injection"
+description: "Swift dependency injection frameworks for building modular, testable iOS and macOS apps."
+---
+
+Dependency injection (DI) is the practice of supplying an object's dependencies from the outside rather than letting it create them internally. In Swift this improves testability (swap real services for mocks), modularity (components depend on protocols, not concrete types), and maintainability (dependencies are explicit and traceable).
+
+## When to use a DI framework
+
+A plain initializer or protocol-based approach covers most small-to-medium projects without any library. Consider a DI framework when:
+
+- Your object graph is large and assembling it by hand is error-prone.
+- You want compile-time safety guarantees that all dependencies are satisfied.
+- You need scoped lifetimes (singleton, per-screen, per-request) managed automatically.
+- You want to generate wiring code to eliminate boilerplate.
+
+<Note>
+  Swift's `@propertyWrapper` and Swift macros have made lightweight DI possible without a full container. See `Locatable`, `Pure`, and `SafeDI` below for modern approaches.
+</Note>
+
+## Libraries
+
+<CardGroup cols={2}>
+  <Card
+    title="Cleanse"
+    icon="broom"
+    href="https://github.com/square/Cleanse"
+  >
+    A lightweight DI framework by Square. Uses a binding/module system inspired by Guice/Dagger. Validates the object graph at startup and provides clear error messages for missing bindings.
+  </Card>
+  <Card
+    title="Corridor"
+    icon="arrow-right-to-bracket"
+    href="https://github.com/symentis/Corridor"
+  >
+    A CoreReader-like DI micro-framework. Uses the Reader monad pattern to thread dependencies through your call stack without a global container.
+  </Card>
+  <Card
+    title="Deli"
+    icon="wand-magic-sparkles"
+    href="https://github.com/kawoou/Deli"
+  >
+    An easy-to-use DI library with annotation-based registration. Scans source code at build time and generates the wiring code automatically.
+  </Card>
+  <Card
+    title="DIKit"
+    icon="cube"
+    href="https://github.com/Liftric/DIKit"
+  >
+    Dependency injection framework inspired by Kotlin's KOIN. Uses a DSL to declare modules and resolve dependencies without reflection or code generation.
+  </Card>
+  <Card
+    title="Dip"
+    icon="droplet"
+    href="https://github.com/AliSoftware/Dip"
+  >
+    A simple DI container. Register factory closures keyed by type or name, then resolve them anywhere. Supports scopes and automatic injection of constructor arguments.
+  </Card>
+  <Card
+    title="DITranquillity"
+    icon="leaf"
+    href="https://github.com/ivlevAstef/DITranquillity/"
+  >
+    A feature-rich DI framework with a declarative Swift DSL. Supports parts (modules), scopes, cycles detection, and storyboard injection for UIKit apps.
+  </Card>
+  <Card
+    title="Locatable"
+    icon="location-dot"
+    href="https://github.com/vincent-pradeilles/locatable"
+  >
+    A micro-framework that uses `@propertyWrapper` to implement the Service Locator pattern. Zero boilerplate: annotate a property with `@Located` and the value is resolved from a shared registry.
+  </Card>
+  <Card
+    title="Pure"
+    icon="flask"
+    href="https://github.com/devxoul/Pure"
+  >
+    Dependency injection without a DI container. `Pure` enforces passing dependencies explicitly through initializers and factory types, keeping your code framework-free while maintaining testability.
+  </Card>
+  <Card
+    title="SafeDI"
+    icon="shield-halved"
+    href="https://github.com/dfed/safedi"
+  >
+    Compile-time safe dependency injection using Swift macros. The macro generates initializer chains at build time, so missing or mistyped dependencies are caught before the app runs.
+  </Card>
+  <Card
+    title="Swinject"
+    icon="rotate"
+    href="https://github.com/Swinject/Swinject"
+  >
+    The most widely adopted Swift DI framework. Provides a container with type-safe registration and resolution, object scopes (transient, graph, container, permanent), and extensions for Storyboard and SwiftUI.
+  </Card>
+  <Card
+    title="Typhoon"
+    icon="cloud-bolt"
+    href="https://github.com/appsquickly/Typhoon"
+  >
+    A mature, full-featured DI toolkit originally targeting Objective-C and Swift. Supports assembly-based configuration, circular dependencies, and property injection alongside constructor injection.
+  </Card>
+  <Card
+    title="Weaver"
+    icon="grip"
+    href="https://github.com/scribd/Weaver"
+  >
+    A declarative, type-safe DI framework from Scribd. Uses annotation comments in source code to generate the dependency container automatically, catching wiring errors at compile time.
+  </Card>
+</CardGroup>

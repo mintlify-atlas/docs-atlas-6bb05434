@@ -1,0 +1,101 @@
+---
+title: "Editor support"
+description: "Swift plugins and extensions for Emacs, Vim, and other editors."
+---
+
+Swift has built-in support in Xcode, and community-maintained plugins are available for Emacs, Vim, and other environments including Google Colaboratory.
+
+<Note>
+  **Xcode** provides first-class Swift support out of the box: syntax highlighting, code completion, refactoring, debugging, and SwiftPM integration. No plugins are required.
+</Note>
+
+## Emacs
+
+<Card title="swift-mode" icon="code" href="https://github.com/swift-emacs/swift-mode">
+  Emacs major mode for Swift source files. Provides syntax highlighting, indentation, and partial Flycheck error support for live diagnostics while you edit.
+</Card>
+
+Install via MELPA:
+
+```elisp
+M-x package-install RET swift-mode RET
+```
+
+Or with `use-package`:
+
+```elisp
+(use-package swift-mode
+  :hook (swift-mode . flycheck-mode))
+```
+
+## Vim
+
+<Columns cols={2}>
+  <Card title="swift-vim" icon="code" href="https://github.com/keith/swift.vim">
+    Vim runtime files for Swift: syntax highlighting and file type detection. Lightweight and focused on correctness.
+  </Card>
+  <Card title="vim-polyglot" icon="layer-group" href="https://github.com/sheerun/vim-polyglot">
+    A curated language pack for Vim that bundles syntax support for dozens of languages, including Swift via swift-vim. A good choice if you want broad language coverage in one plugin.
+  </Card>
+</Columns>
+
+### Installing swift-vim
+
+<Tabs>
+  <Tab title="vim-plug">
+    ```vim
+    Plug 'keith/swift.vim'
+    ```
+  </Tab>
+  <Tab title="Vundle">
+    ```vim
+    Plugin 'keith/swift.vim'
+    ```
+  </Tab>
+  <Tab title="Pathogen">
+    ```bash
+    git clone https://github.com/keith/swift.vim ~/.vim/bundle/swift.vim
+    ```
+  </Tab>
+</Tabs>
+
+### Installing vim-polyglot
+
+<Tabs>
+  <Tab title="vim-plug">
+    ```vim
+    Plug 'sheerun/vim-polyglot'
+    ```
+  </Tab>
+  <Tab title="Vundle">
+    ```vim
+    Plugin 'sheerun/vim-polyglot'
+    ```
+  </Tab>
+</Tabs>
+
+<Note>
+  If you install vim-polyglot alongside swift-vim, disable the Swift component of vim-polyglot to avoid conflicts: `let g:polyglot_disabled = ['swift']`
+</Note>
+
+## Google Colaboratory
+
+<Card title="swift-colab" icon="google" href="https://github.com/philipturner/swift-colab">
+  Run Swift in a Google Colaboratory notebook directly in your browser. Enables Swift kernel support in Colab, making it possible to write and execute Swift code in a notebook environment without any local installation.
+</Card>
+
+Swift-colab is useful for experimenting with Swift on Linux, running educational Swift notebooks, or sharing reproducible Swift code examples.
+
+## SPM integration in editors
+
+Swift Package Manager integrates with editors through the [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/) via **SourceKit-LSP**, which ships with the Swift toolchain.
+
+Editors that support LSP — including VS Code, Vim (via plugins), Emacs, and others — can use SourceKit-LSP to provide:
+
+- Code completion
+- Go-to-definition
+- Find references
+- Inline diagnostics
+- Symbol search
+
+Install the Swift extension for VS Code to get SourceKit-LSP automatically, or configure your editor's LSP client to use `sourcekit-lsp` from your Swift toolchain path.

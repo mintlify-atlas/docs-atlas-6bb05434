@@ -1,0 +1,76 @@
+---
+title: "Concurrency"
+description: "Swift libraries for async/await, promises, futures, and structured concurrency patterns."
+---
+
+Swift 5.5 introduced native `async/await`, structured concurrency, and `Actor` types. The libraries below complement the built-in concurrency model — offering chainable async interfaces, coroutines, throttling helpers, and promise-based abstractions that work alongside or on top of Swift's modern concurrency primitives.
+
+<Note>
+  Libraries marked with a penguin icon support Linux in addition to Apple platforms.
+</Note>
+
+<AccordionGroup>
+
+  <Accordion title="async/await helpers">
+    Libraries that extend or simplify Swift's native async/await model.
+
+    | Library | Description |
+    |---------|-------------|
+    | [async+](https://github.com/async-plus/async-plus) | A chainable interface for Swift 5.5's async/await. |
+    | [AsyncQueue](https://github.com/dfed/swift-async-queue) | A library of queues that enable sending ordered tasks from synchronous to asynchronous contexts. |
+    | [Throttler](https://github.com/boraseoksoon/Throttler) | Throttle a massive number of asynchronous inputs with a single line API. |
+  </Accordion>
+
+  <Accordion title="Promises and futures">
+    Lightweight abstractions for asynchronous results.
+
+    | Library | Description |
+    |---------|-------------|
+    | [Futures](https://github.com/davidask/Futures) | Lightweight promises for iOS, macOS, tvOS, watchOS, and server-side. |
+    | [Hydra](https://github.com/malcommac/Hydra) | Promises & Await — write better async code in a familiar style. |
+  </Accordion>
+
+  <Accordion title="Reactive and event-driven concurrency">
+    Libraries based on reactive programming primitives.
+
+    | Library | Description |
+    |---------|-------------|
+    | [AsyncNinja](https://github.com/AsyncNinja/AsyncNinja) | A complete set of concurrency and reactive programming primitives. |
+  </Accordion>
+
+  <Accordion title="Task queuing and scheduling">
+    Libraries for managing concurrent operations and work groups.
+
+    | Library | Description |
+    |---------|-------------|
+    | [GroupWork](https://github.com/quanvo87/GroupWork) | Easy concurrent, asynchronous tasks. |
+    | [Queuer](https://github.com/FabrizioBrancati/Queuer) | A queue manager built on top of OperationQueue and Dispatch (GCD). |
+  </Accordion>
+
+  <Accordion title="Coroutines and CSP">
+    Coroutine and communicating-sequential-processes style concurrency.
+
+    | Library | Description |
+    |---------|-------------|
+    | [SwiftCoroutine](https://github.com/belozierov/SwiftCoroutine) | Coroutines for iOS, macOS and Linux. |
+    | [Venice](https://github.com/Zewo/Venice) | Communicating sequential processes (CSP), Linux ready. |
+  </Accordion>
+
+  <Accordion title="GCD and timer utilities">
+    Libraries for working with Grand Central Dispatch and timer-based scheduling.
+
+    | Library | Description |
+    |---------|-------------|
+    | [Async](https://github.com/duemunk/Async) | Syntactic sugar for Grand Central Dispatch — dispatch blocks on background, main, or custom queues with a clean API. |
+    | [AwaitKit](https://github.com/yannickl/AwaitKit) | ES7-style async/await control flow for Swift. |
+    | [Each](https://github.com/dalu93/Each) | A `NSTimer` bridge library with a clean closure-based API. |
+    | [GCDTimer](https://github.com/hemantasapkota/GCDTimer) | A well-tested GCD timer in Swift. |
+    | [Schedule](https://github.com/luoxiu/Schedule) | A lightweight task scheduler with an incredibly human-friendly syntax. Linux compatible. |
+    | [SwiftyTimer](https://github.com/radex/SwiftyTimer) | Swifty API for `NSTimer`. |
+  </Accordion>
+
+</AccordionGroup>
+
+<Tip>
+  For reactive event streams and observable sequences, also see the [Events](/libs/events) section, which covers RxSwift, Combine wrappers, and related libraries.
+</Tip>

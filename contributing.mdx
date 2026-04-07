@@ -1,0 +1,114 @@
+---
+title: "Contributing"
+description: "How to add libraries, fix entries, and contribute to Awesome Swift."
+---
+
+Awesome Swift is community-driven. Contributions — whether adding a new library, fixing a description, or flagging an outdated entry — are always welcome.
+
+<Info>
+  The README is auto-generated. **Do not edit `README.md` directly.** All changes must go through `contents.json`.
+</Info>
+
+## How to add a library
+
+<Steps>
+  <Step title="Fork the repository">
+    Fork [matteocrippa/awesome-swift](https://github.com/matteocrippa/awesome-swift) on GitHub, then clone your fork locally.
+  </Step>
+  <Step title="Check for duplicates">
+    Search `contents.json` to make sure the library isn't already listed. Duplicate submissions are declined.
+  </Step>
+  <Step title="Add your entry to contents.json">
+    Open `contents.json` and add a new object to the `projects` array. Use the format below.
+  </Step>
+  <Step title="Submit a pull request">
+    Open a pull request with a link to the library and a brief explanation of why it belongs on the list. Make one pull request per suggestion.
+  </Step>
+</Steps>
+
+## Entry format
+
+Each project entry in `contents.json` follows this structure:
+
+```json contents.json
+{
+  "title": "Commander",
+  "category": "command-line",
+  "description": "Compose beautiful command line interfaces.",
+  "homepage": "https://github.com/kylef/Commander",
+  "tags": ["linux"]
+}
+```
+
+| Field | Required | Description |
+|---|---|---|
+| `title` | Yes | The official name of the project. |
+| `category` | Yes | The category `id` the project belongs to. Must match an existing category in the `categories` array. |
+| `description` | No | A short sentence describing what the library does. |
+| `homepage` | Yes | The full URL to the project's homepage or GitHub repository. |
+| `tags` | No | An array of metadata tags. Use `["linux"]` if the library supports Linux. |
+
+### Writing a good description
+
+- Start with a capital letter and end with a full stop.
+- Keep it short — one sentence is enough.
+- Don't include "written in Swift" or "in Swift". Everything on this list is Swift.
+- Check your spelling and grammar before submitting.
+
+## Criteria for inclusion
+
+Your library must meet all of the following before it can be added:
+
+- Actively maintained and used by the community
+- Performs a useful function
+- Well documented
+- Compatible with the latest SDK
+- README written in English
+- At least 15 GitHub stars
+- Supports Swift 5 or later
+- Released under one of: Apache License 2.0, BSD 2, BSD 3, GPL, LGPL, or MIT
+
+<Warning>
+  If your library doesn't meet all of these criteria, the pull request will be closed without merging. Check the requirements before submitting.
+</Warning>
+
+## How to remove a library
+
+If a library on the list is no longer maintained or no longer meets the criteria, don't open a pull request — **open an issue** instead. The maintainers will review and remove it if appropriate.
+
+## Validation and CI
+
+Pull requests run automated checks via a `Dangerfile`. The CI process validates that links in the README (generated from your `contents.json` changes) resolve correctly. If a link is broken, the build fails and the PR cannot be merged.
+
+To avoid this:
+
+- Make sure the `homepage` URL in your entry is correct and publicly accessible.
+- Use `https://` links, not `http://`.
+
+<Tip>
+  You can validate `contents.json` locally against the project's JSON schema at `.github/schema.json` before opening a pull request.
+</Tip>
+
+## Category management
+
+If you think a new category is needed, or that the existing categorization should change, **open an issue** rather than creating the category directly in a pull request. This keeps categorization consistent across the list.
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant Code of Conduct](https://github.com/matteocrippa/awesome-swift/blob/master/CODE_OF_CONDUCT.md). By participating, you agree to:
+
+- Use welcoming and inclusive language
+- Respect differing viewpoints and experiences
+- Accept constructive criticism gracefully
+- Focus on what is best for the community
+
+Unacceptable behavior — including harassment, personal attacks, or publishing others' private information — will not be tolerated. Report incidents by opening an issue on the repository.
+
+<CardGroup cols={2}>
+  <Card title="Open a pull request" icon="code-pull-request" href="https://github.com/matteocrippa/awesome-swift/pulls">
+    Submit a new library or fix an existing entry on GitHub.
+  </Card>
+  <Card title="Open an issue" icon="circle-exclamation" href="https://github.com/matteocrippa/awesome-swift/issues">
+    Report an outdated library, suggest a new category, or flag a problem.
+  </Card>
+</CardGroup>

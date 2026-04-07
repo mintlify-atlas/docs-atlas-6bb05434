@@ -1,23 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Awesome Swift",
+  "projectType": "general",
+  "projectName": "Awesome Swift",
+  "projectDescription": "A collaborative curated list of awesome Swift libraries, frameworks, tools, and resources for iOS, macOS, and Linux development.",
   "theme": "palm",
-  "colors": {
-    "primary": "#F05138",
-    "light": "#FF7B5E",
-    "dark": "#C03A20"
-  },
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/matteocrippa/awesome-swift"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/matteocrippa/awesome-swift"
-    }
-  },
+  "primaryColor": "#F05138",
+  "lightColor": "#FF7B5E",
+  "darkColor": "#C03A20",
   "navigation": {
     "tabs": [
       {
@@ -63,5 +51,26 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "1000+ curated Swift libraries and resources",
+    "Comprehensive coverage of iOS, macOS, tvOS, watchOS, and Linux",
+    "Categorized by domain (UI, Networking, Data, Hardware, etc.)",
+    "Linux-compatible libraries marked with penguin emoji",
+    "Actively maintained with regular updates",
+    "Community-driven contributions via GitHub",
+    "Covers everything from animation to AI/ML to cryptography"
+  ],
+  "publicApiSurface": [
+    "Guides: Official Swift guides, style guides, third-party tutorials",
+    "Tools: CocoaPods, Carthage, SwiftPM, XcodeGen, Tuist",
+    "UI Libraries: UIKit and SwiftUI components",
+    "Networking: Alamofire, Moya, URLSession wrappers",
+    "Data Management: Core Data, Realm, SQLite, JSON parsing",
+    "Animation: Lottie, Spring, custom animation frameworks",
+    "Security: Cryptography, Keychain wrappers",
+    "Testing: Unit test frameworks, mock libraries",
+    "Concurrency: async/await helpers, RxSwift, Combine",
+    "Hardware: Bluetooth, Camera, ARKit, Sensors"
+  ]
 }

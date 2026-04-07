@@ -1,0 +1,102 @@
+---
+title: "App routing"
+description: "Swift routing libraries for URL handling, deep links, flow coordinators, and navigation management."
+---
+
+Navigation in iOS apps can be handled at several levels of abstraction. Understanding the available approaches helps you pick the right library for your stack.
+
+## Routing approaches
+
+<AccordionGroup>
+  <Accordion title="URL-based routing">
+    Register URL patterns (custom schemes or universal links) and map them to destinations. Useful for deep links, push notifications, and inter-app communication. Libraries like `Crossroad`, `SwiftRouter`, and `URLNavigator` take this approach.
+  </Accordion>
+  <Accordion title="Flow coordinators">
+    A coordinator object owns a navigation stack and orchestrates transitions between screens. View controllers no longer push/present each other directly, decoupling navigation from UI code. `MonarchRouter` and `RxFlow` implement coordinator-based flows.
+  </Accordion>
+  <Accordion title="Declarative / SwiftUI routing">
+    Navigation is expressed as state — the active route is a value in the app's state tree, and the view hierarchy renders accordingly. `SwiftUIRoutes` and `SimplexArchitecture` (see Patterns) follow this model.
+  </Accordion>
+  <Accordion title="Deep link & external app routing">
+    Some libraries focus on launching other apps or handling universal links from outside your app. `Appz` and `Linker` target this use case.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  For SwiftUI apps targeting iOS 16+, consider Apple's built-in `NavigationStack` with `NavigationPath` before reaching for a third-party router. Libraries here are most valuable for UIKit apps, complex flow logic, or deep-link parsing.
+</Tip>
+
+## Libraries
+
+<CardGroup cols={2}>
+  <Card
+    title="Appz"
+    icon="arrow-up-right-from-square"
+    href="https://github.com/SwiftKitz/Appz"
+  >
+    Launch external apps and handle deep links with ease. Provides a typed, discoverable API for opening well-known apps (Safari, Mail, Maps, etc.) without hardcoding URL schemes.
+  </Card>
+  <Card
+    title="Crossroad"
+    icon="bus"
+    href="https://github.com/giginet/Crossroad"
+  >
+    A URL router focused on handling custom URL schemes. Register pattern handlers with named parameters; the router parses incoming URLs and dispatches to the correct handler with typed arguments.
+  </Card>
+  <Card
+    title="LightRoute"
+    icon="route"
+    href="https://github.com/SpectralDragon/LiteRoute"
+  >
+    Routing between VIPER modules. Provides a protocol-based transition layer so that presenters can trigger navigation without importing UIKit or knowing about the destination view controller's concrete type.
+  </Card>
+  <Card
+    title="Linker"
+    icon="link"
+    href="https://github.com/MaksimKurpa/Linker"
+  >
+    A lightweight way to handle internal and external deep links for iOS. Maps URL patterns to closures and supports both custom schemes and universal links.
+  </Card>
+  <Card
+    title="MonarchRouter"
+    icon="crown"
+    href="https://github.com/nikans/MonarchRouter"
+  >
+    A declarative state- and URL-based router. Manages complex, automatic view controller hierarchy transitions and follows server-side routing conventions for mapping URL paths to destinations.
+  </Card>
+  <Card
+    title="RxFlow"
+    icon="diagram-project"
+    href="https://github.com/RxSwiftCommunity/RxFlow"
+  >
+    Navigation framework based on a reactive flow coordinator pattern. Flows define sequences of screens; a coordinator driven by RxSwift observables transitions between them, keeping navigation logic out of view controllers.
+  </Card>
+  <Card
+    title="SwiftCurrent"
+    icon="bolt"
+    href="https://github.com/wwt/SwiftCurrent"
+  >
+    Manage complex workflows wherever Swift can be built. Represents multi-step flows as typed sequences; supports UIKit, Storyboards, and SwiftUI with the same workflow definition.
+  </Card>
+  <Card
+    title="SwiftRouter"
+    icon="map"
+    href="https://github.com/skyline75489/SwiftRouter"
+  >
+    A URL router for iOS. Lightweight registration of URL patterns to handler closures, with support for wildcards and query parameters.
+  </Card>
+  <Card
+    title="SwiftUIRoutes"
+    icon="compass"
+    href="https://github.com/gabriel/swiftui-routes"
+  >
+    A minimal and flexible router for SwiftUI apps. Expresses the active route as state and renders the corresponding view, keeping navigation logic outside individual views.
+  </Card>
+  <Card
+    title="URLNavigator"
+    icon="location-arrow"
+    href="https://github.com/devxoul/URLNavigator"
+  >
+    Elegant URL routing. Maps URL patterns to view controllers or handler closures and supports both push and modal presentation. Works well for deep-link handling in UIKit apps.
+  </Card>
+</CardGroup>

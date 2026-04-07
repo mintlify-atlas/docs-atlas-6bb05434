@@ -1,0 +1,88 @@
+---
+title: "Dependency managers"
+description: "Tools for managing Swift package dependencies in your iOS and macOS projects."
+---
+
+Swift has several dependency managers, each with different trade-offs. This page covers the most widely used options and guidance on when to choose each one.
+
+<CardGroup cols={2}>
+  <Card title="swift-package-manager" icon="box" href="https://github.com/swiftlang/swift-package-manager">
+    Apple's official package manager for Swift. Built into Xcode and the Swift toolchain — no installation required.
+  </Card>
+  <Card title="CocoaPods" icon="circle-dot" href="https://github.com/CocoaPods/CocoaPods">
+    The most widely used dependency manager in the iOS/macOS ecosystem, with the largest library of available pods.
+  </Card>
+  <Card title="Carthage" icon="code-branch" href="https://github.com/Carthage/Carthage">
+    A decentralized dependency manager that builds dependencies into frameworks without modifying your Xcode project.
+  </Card>
+  <Card title="Accio" icon="wand-magic-sparkles" href="https://github.com/JamitLabs/Accio">
+    A SwiftPM-based dependency manager for iOS and related platforms, with improvements over Carthage for caching and workflow.
+  </Card>
+  <Card title="Mint" icon="terminal" href="https://github.com/yonaskolb/Mint">
+    A package manager focused on Swift command-line tools — installs and runs CLI tools directly from Swift packages.
+  </Card>
+  <Card title="Swiftly" icon="wrench" href="https://github.com/swiftlang/swiftly">
+    A Swift toolchain installer that lets you install and switch between different versions of Swift on your machine.
+  </Card>
+</CardGroup>
+
+## Tool details
+
+<AccordionGroup>
+  <Accordion title="swift-package-manager (SPM)" icon="box">
+    [swift-package-manager](https://github.com/swiftlang/swift-package-manager) is the official package manager for the Swift programming language, maintained by Apple and the Swift open-source community. It is integrated directly into Xcode (File → Add Package Dependencies) and the `swift` command-line tool.
+
+    SPM uses a `Package.swift` manifest file at the root of your project to declare dependencies, targets, and products. It handles downloading, building, and linking dependencies automatically.
+
+    **When to use it:** Choose SPM for all new projects. It requires no additional installation, is fully supported by Apple, and works on Linux as well as Apple platforms.
+  </Accordion>
+
+  <Accordion title="CocoaPods" icon="circle-dot">
+    [CocoaPods](https://github.com/CocoaPods/CocoaPods) is the longest-established and most popular dependency manager in the Apple ecosystem. It uses a `Podfile` to declare dependencies and integrates them into your Xcode workspace via a generated `Pods` project.
+
+    CocoaPods hosts thousands of libraries on [cocoapods.org](https://cocoapods.org), including many that predate SPM support.
+
+    **When to use it:** Choose CocoaPods when you depend on libraries that have not yet adopted SPM, or when working on an existing project that already uses it.
+  </Accordion>
+
+  <Accordion title="Carthage" icon="code-branch">
+    [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager. Unlike CocoaPods, it does not modify your Xcode project file. Instead it builds each dependency into a binary framework that you manually link into your project.
+
+    Carthage reads a `Cartfile` to resolve dependencies and fetches them from their source repositories (typically GitHub).
+
+    **When to use it:** Choose Carthage when you want minimal integration with your Xcode project and prefer pre-built binaries. Less common on new projects since SPM has become the standard.
+  </Accordion>
+
+  <Accordion title="Accio" icon="wand-magic-sparkles">
+    [Accio](https://github.com/JamitLabs/Accio) builds on top of SwiftPM and adds features that were historically only available in Carthage, such as caching built frameworks to speed up CI and local builds.
+
+    **When to use it:** Consider Accio if you are already using a SwiftPM-compatible dependency graph but need faster build times through framework caching, particularly in larger teams or CI environments.
+  </Accordion>
+
+  <Accordion title="Mint" icon="terminal">
+    [Mint](https://github.com/yonaskolb/Mint) installs and runs Swift command-line tools from Swift packages. It is not a library dependency manager — it manages developer tooling (linters, code generators, build scripts) that you run from the command line.
+
+    **When to use it:** Use Mint to pin and share CLI development tools like SwiftGen, XcodeGen, or SwiftLint across your team without requiring each developer to install them globally.
+  </Accordion>
+
+  <Accordion title="Swiftly" icon="wrench">
+    [Swiftly](https://github.com/swiftlang/swiftly) is a Swift toolchain installer and version manager. It is not a project dependency manager — it manages which version of Swift itself is installed on your machine.
+
+    **When to use it:** Use Swiftly when you need to run multiple Swift versions on a single machine, or when setting up a development environment on Linux.
+  </Accordion>
+</AccordionGroup>
+
+## Comparison
+
+| Tool | Purpose | Modifies Xcode project | Works on Linux |
+|---|---|---|---|
+| swift-package-manager | Library and tool dependencies | No | Yes |
+| CocoaPods | Library dependencies | Yes (workspace) | No |
+| Carthage | Library dependencies | No (manual linking) | No |
+| Accio | Library dependencies (SPM-based) | No | No |
+| Mint | CLI tool management | No | Yes |
+| Swiftly | Swift toolchain versioning | No | Yes |
+
+<Tip>
+  For new projects, start with **swift-package-manager**. Add CocoaPods only if a required library does not support SPM. Use Mint to manage CLI tools like code generators and linters.
+</Tip>

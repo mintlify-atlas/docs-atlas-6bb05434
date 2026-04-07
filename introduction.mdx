@@ -1,0 +1,107 @@
+---
+title: "Introduction"
+description: "What Awesome Swift is, how it's organized, and how to navigate the collection."
+---
+
+Awesome Swift is a community-maintained, curated list of Swift libraries, frameworks, tools, and resources. It covers iOS, macOS, tvOS, watchOS, and Linux development. The list currently tracks **1,098 projects** and is updated regularly — last updated March 28, 2026.
+
+The project is part of the [awesome](https://github.com/sindresorhus/awesome) ecosystem: a collection of high-quality, curated lists across the open source world.
+
+## Linux compatibility
+
+Libraries marked with a 🐧 badge are compatible with Linux via Swift on Linux and Swift Package Manager. If you're building server-side or cross-platform Swift, filter for this badge to find libraries that work outside of Apple platforms.
+
+## How the list is structured
+
+The collection is organized into three top-level areas:
+
+<CardGroup cols={3}>
+  <Card title="Guides" icon="book-open" href="/guides/official-guides">
+    Official Swift documentation, newsletters, style guides, and third-party tutorials for learning Swift.
+  </Card>
+  <Card title="Tools" icon="wrench" href="/tools/dependency-managers">
+    Dependency managers, editor plugins, REPL environments, boilerplates, and productivity utilities for Swift development.
+  </Card>
+  <Card title="Libs" icon="puzzle-piece" href="/libs/ui">
+    Over 1,000 Swift libraries organized by function: UI, networking, data management, hardware, security, and more.
+  </Card>
+</CardGroup>
+
+### Guides
+
+The Guides section contains learning resources:
+
+- **Newsletter** — the [Open Source Updates for Swift Projects](https://ossp-updates.beehiiv.com/) bi-weekly newsletter
+- **Official Guides** — Apple's Swift documentation, the Swift Programming Language eBook, and the official getting started guide
+- **Style Guides** — coding style references from Airbnb, Google, LinkedIn, and Raywenderlich
+- **Third-party Guides** — community tutorials, playgrounds, and video courses
+
+### Tools
+
+The Tools section covers the development toolchain:
+
+- **Dependency managers** — CocoaPods, Carthage, Swift Package Manager, Mint, Accio, and Swiftly
+- **Editor support** — Emacs, Vim, and Google Colaboratory integrations
+- **Boilerplates** — project templates and module starters
+- **REPL** — online playgrounds like SwiftFiddle and Online Swift Playground
+- **Misc** — code generators, Xcode utilities, and build tools like Tuist and XcodeGen
+
+### Libs
+
+The Libs section is the largest part of the collection. It is organized by domain, covering over 60 categories including:
+
+- UI components, animation, layout, and image handling
+- Networking, caching, and data management (Core Data, Realm, SQLite, JSON)
+- App architecture patterns (MVVM, VIPER, Composable Architecture, Redux)
+- Hardware access (Bluetooth, camera, sensors, ARKit)
+- Security, cryptography, and keychain access
+- AI, machine learning, and CoreML
+- Testing, logging, and analytics
+
+## How to navigate this site
+
+<Steps>
+  <Step title="Use the sidebar tabs">
+    The site has two main tabs: **Overview** (guides, tools, and this introduction) and **Libraries** (all lib categories grouped by domain).
+  </Step>
+  <Step title="Browse by category">
+    Each sidebar group contains related categories. Open a group to see all libraries in that area, with links to GitHub and short descriptions.
+  </Step>
+  <Step title="Check the Linux badge">
+    If you need Linux compatibility, look for the 🐧 badge next to a library's name. Only entries with this tag are confirmed to work on Linux.
+  </Step>
+  <Step title="Go to the source">
+    The list is generated from [`contents.json`](https://github.com/matteocrippa/awesome-swift/blob/master/contents.json) in the GitHub repository. Every entry links directly to its project page.
+  </Step>
+</Steps>
+
+<Note>
+  The README is auto-generated from `contents.json`. If you want to suggest a new library or fix an entry, edit the JSON file — not the README. See the [contributing guide](/contributing) for the full process.
+</Note>
+
+## What qualifies for the list
+
+Not every Swift library appears here. To be included, a project must meet these criteria:
+
+- Actively maintained and used by the community
+- Well documented with a README in English
+- At least 15 GitHub stars
+- Supports Swift 5 or later
+- Released under Apache 2.0, BSD 2/3, GPL, LGPL, or MIT license
+- Compatible with the latest SDK
+
+<Tip>
+  If you find a library that no longer meets these criteria, open an issue on [GitHub](https://github.com/matteocrippa/awesome-swift/issues) to have it reviewed for removal.
+</Tip>
+
+## Related awesome lists
+
+If you are looking for iOS or Apple platform resources beyond Swift libraries, these related lists are worth bookmarking:
+
+| List | Description |
+|------|-------------|
+| [Awesome iOS Interview](https://github.com/dashvlas/awesome-ios-interview) | Questions to help you prepare for iOS developer interviews. |
+| [awesome-macOS](https://github.com/iCHAIT/awesome-macOS) | Curated list of awesome applications, tools, and utilities for macOS. |
+| [example-ios-apps](https://github.com/jogendra/example-ios-apps) | Example iOS apps — useful for beginners learning iOS development. |
+| [open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps) | A collaborative list of open-source iOS apps. |
+| [open-source-mac-os-apps](https://github.com/serhii-londar/open-source-mac-os-apps) | Awesome list of open source applications for macOS. |

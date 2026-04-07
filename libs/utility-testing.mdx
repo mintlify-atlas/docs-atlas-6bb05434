@@ -1,0 +1,497 @@
+---
+title: "Testing, logging & utilities"
+description: "Swift libraries for unit testing, mocking, logging, validation, string utilities, and general-purpose helpers."
+---
+
+<AccordionGroup>
+  <Accordion title="Testing">
+    A collection of testing frameworks for behavior-driven development, network stubbing, UI testing, and snapshot testing.
+
+    <CardGroup cols={2}>
+      <Card title="Quick" href="https://github.com/Quick/Quick">
+        Behavior-driven development framework for Swift and Objective-C. Linux compatible.
+      </Card>
+      <Card title="Nimble" href="https://github.com/Quick/Nimble">
+        A matcher framework for writing expressive test assertions.
+      </Card>
+      <Card title="XCTest" href="https://github.com/swiftlang/swift-corelibs-xctest">
+        The XCTest project — a Swift core library for unit test support.
+      </Card>
+      <Card title="DVR" href="https://github.com/venmo/DVR">
+        A simple network testing framework for recording and replaying network sessions.
+      </Card>
+      <Card title="Erik" href="https://github.com/phimage/Erik">
+        A headless browser for accessing and manipulating webpages via JavaScript, enabling functional tests.
+      </Card>
+      <Card title="Mussel" href="https://github.com/UrbanCompass/Mussel">
+        Framework for easily testing Push Notifications, Universal Links, and Routing in XCUITests.
+      </Card>
+      <Card title="OHHTTPStubs" href="https://github.com/AliSoftware/OHHTTPStubs">
+        A testing library for stubbing network requests with ease.
+      </Card>
+      <Card title="SBTUITestTunnel" href="https://github.com/Subito-it/SBTUITestTunnel">
+        UI testing library for interacting with network requests, stubbing CLLocationManager, UNUserNotificationCenter, and fine-grained scrolling.
+      </Card>
+      <Card title="Sizes" href="https://github.com/marcosgriselli/Sizes">
+        Test your app on different device and font sizes.
+      </Card>
+      <Card title="SnapshotTest" href="https://github.com/parski/SnapshotTest">
+        Snapshot testing tool for iOS and tvOS.
+      </Card>
+      <Card title="Spectre" href="https://github.com/kylef/Spectre">
+        BDD framework for Swift. Linux compatible.
+      </Card>
+      <Card title="swift-testing-expectation" href="https://github.com/dfed/swift-testing-expectation">
+        Create an asynchronous expectation in Swift Testing.
+      </Card>
+      <Card title="SwiftCheck" href="https://github.com/typelift/SwiftCheck">
+        A testing library that automatically generates random data for testing program properties.
+      </Card>
+      <Card title="UI Testing Cheat Sheet" href="https://github.com/joemasilotti/UI-Testing-Cheat-Sheet">
+        Answers to common UI Testing questions with a working example app.
+      </Card>
+      <Card title="Fakery" href="https://github.com/vadymmarkov/Fakery">
+        Fake data generator for Swift.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Mock">
+    Libraries for mocking dependencies, HTTP requests, and data types in tests.
+
+    <CardGroup cols={2}>
+      <Card title="AutoMockable" href="https://github.com/vincent-pradeilles/AutoMocker">
+        A framework that leverages the type system to let you easily create mocked instances of your data types.
+      </Card>
+      <Card title="Cuckoo" href="https://github.com/Brightify/Cuckoo">
+        First boilerplate-free mocking framework for Swift.
+      </Card>
+      <Card title="Mocker" href="https://github.com/WeTransfer/Mocker">
+        Mock Alamofire and URLSession requests without touching your code implementation.
+      </Card>
+      <Card title="Mockingbird" href="https://github.com/Farfetch/mockingbird">
+        Simplify software testing by easily mocking any system using HTTP/HTTPS.
+      </Card>
+      <Card title="Mockingjay" href="https://github.com/kylef/Mockingjay">
+        An elegant library for stubbing HTTP requests.
+      </Card>
+      <Card title="Mockit" href="https://github.com/sabirvirtuoso/Mockit">
+        A simple mocking framework inspired by Mockito for Java.
+      </Card>
+      <Card title="MockSwift" href="https://github.com/leoture/MockSwift">
+        Mock framework that uses the power of property wrappers.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Logging">
+    Libraries for structured and configurable logging, console output, and runtime diagnostics.
+
+    <CardGroup cols={2}>
+      <Card title="AEConsole" href="https://github.com/tadija/AEConsole">
+        Customizable console UI overlay with debug log on top of your iOS app.
+      </Card>
+      <Card title="CleanroomLogger" href="https://github.com/emaloney/CleanroomLogger">
+        Configurable and extensible high-level logging API that is simple, lightweight, and performant.
+      </Card>
+      <Card title="Duration" href="https://github.com/SwiftStudies/Duration">
+        Lightweight logging library focused on reporting timings for operations. Linux compatible.
+      </Card>
+      <Card title="Gedatsu" href="https://github.com/bannzai/gedatsu">
+        Provides readable format for AutoLayout error console log output.
+      </Card>
+      <Card title="HeliumLogger" href="https://github.com/Kitura/HeliumLogger">
+        IBM's lightweight logging framework. Linux compatible.
+      </Card>
+      <Card title="Printer" href="https://github.com/hemangshah/printer">
+        A fancy logger for your next app.
+      </Card>
+      <Card title="Puppy" href="https://github.com/sushichop/Puppy">
+        A flexible logging library that supports multiple transports and platforms. Linux compatible.
+      </Card>
+      <Card title="QorumLogs" href="https://github.com/Esqarrouth/QorumLogs">
+        Logging utility for Xcode and Google Docs.
+      </Card>
+      <Card title="Rainbow" href="https://github.com/onevcat/Rainbow">
+        Delightful console output for Swift. Linux compatible.
+      </Card>
+      <Card title="SwiftyBeaver" href="https://github.com/SwiftyBeaver/SwiftyBeaver">
+        Multi-platform logging during development and release. Linux compatible.
+      </Card>
+      <Card title="TinyConsole" href="https://github.com/Cosmo/TinyConsole">
+        A tiny log console to display information while using your iOS app.
+      </Card>
+      <Card title="TraceLog" href="https://github.com/tonystone/tracelog">
+        Dead simple logging the way it's meant to be. Runs on iOS, macOS, and Linux.
+      </Card>
+      <Card title="Watchdog" href="https://github.com/wojteklu/Watchdog">
+        Utility for logging excessive blocking on the main thread.
+      </Card>
+      <Card title="WatchdogInspector" href="https://github.com/tapwork/WatchdogInspector">
+        A logging tool to show the current framerate (fps) in the status bar of your iOS app.
+      </Card>
+      <Card title="Willow" href="https://github.com/Nike-Inc/Willow">
+        Willow is a powerful yet lightweight logging library.
+      </Card>
+      <Card title="XCGLogger" href="https://github.com/DaveWoodCom/XCGLogger">
+        Full-featured and configurable logging utility with log levels, timestamps, and line numbers.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Validation">
+    Libraries for validating user input, form fields, and phone numbers.
+
+    <CardGroup cols={2}>
+      <Card title="ATGValidator" href="https://github.com/altayer-digital/ATGValidator">
+        Rule-based validation framework with form and card validation support for iOS.
+      </Card>
+      <Card title="FormValidatorSwift" href="https://github.com/ustwo/formvalidator-swift">
+        Allows you to validate inputs of text fields and text views in a convenient way.
+      </Card>
+      <Card title="Input Mask" href="https://github.com/RedMadRobot/input-mask-ios">
+        Pattern-based user input formatter, parser, and validator for iOS.
+      </Card>
+      <Card title="RxValidator" href="https://github.com/vbmania/RxValidator">
+        Simple, extensible, and flexible validation checker.
+      </Card>
+      <Card title="SwiftValidator" href="https://github.com/SwiftValidatorCommunity/SwiftValidator">
+        A rule-based validation library.
+      </Card>
+      <Card title="SwiftValidators" href="https://github.com/gkaimakas/SwiftValidators">
+        String validation for iOS inspired by validator.js.
+      </Card>
+      <Card title="ValidatedPropertyKit" href="https://github.com/SvenTiigi/ValidatedPropertyKit">
+        Easily validate your properties with property wrappers.
+      </Card>
+    </CardGroup>
+
+    **Phone Numbers**
+
+    <CardGroup cols={2}>
+      <Card title="NKVPhonePicker" href="https://github.com/NikKovIos/NKVPhonePicker">
+        A UITextField subclass to simplify country code picking.
+      </Card>
+      <Card title="PhoneNumberKit" href="https://github.com/marmelroy/PhoneNumberKit">
+        Framework for parsing, formatting, and validating international phone numbers. Inspired by Google's libphonenumber.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Text">
+    Libraries for attributed strings, Markdown rendering, rich text editing, and string manipulation.
+
+    <CardGroup cols={2}>
+      <Card title="Attributed" href="https://github.com/Nirma/Attributed">
+        Modern µframework for attributed strings.
+      </Card>
+      <Card title="AttributedTextView" href="https://github.com/evermeer/AttributedTextView">
+        Easiest way to create an attributed UITextView with support for multiple links, hashtags, and mentions.
+      </Card>
+      <Card title="BonMot" href="https://github.com/Rightpoint/BonMot">
+        Beautiful, easy attributed strings for iOS.
+      </Card>
+      <Card title="Croc" href="https://github.com/JKalash/Croc">
+        A lightweight emoji parsing and querying library.
+      </Card>
+      <Card title="edhita" href="https://github.com/tnantoka/edhita">
+        Fully open source text editor for iOS.
+      </Card>
+      <Card title="GMarkdown" href="https://github.com/GIKICoder/GMarkdown">
+        Markdown rendering library for iOS with support for tables, LaTeX, Mermaid, and code highlighting.
+      </Card>
+      <Card title="MarkdownDisplayView" href="https://github.com/zjc19891106/MarkdownDisplayView">
+        A Markdown rendering component built on TextKit 2, with streaming AI conversational interaction support.
+      </Card>
+      <Card title="MarkdownKit" href="https://github.com/bmoliveira/MarkdownKit">
+        A simple and customizable Markdown parser.
+      </Card>
+      <Card title="MarkdownView" href="https://github.com/keitaoouchi/MarkdownView">
+        iOS Markdown view.
+      </Card>
+      <Card title="MarkyMark" href="https://github.com/M2Mobi/Marky-Mark">
+        Converts Markdown into native views or attributed strings.
+      </Card>
+      <Card title="Notepad" href="https://github.com/ruddfawcett/Notepad">
+        A fully themeable Markdown editor with live syntax highlighting.
+      </Card>
+      <Card title="OEMentions" href="https://github.com/omar14/OEMentions">
+        An easy way to add mentions to UITextView like Facebook and Instagram.
+      </Card>
+      <Card title="Parsey" href="https://github.com/rxwei/Parsey">
+        Parser combinator framework with source location tracking, backtracking prevention, and rich error messages.
+      </Card>
+      <Card title="Pluralize.swift" href="https://github.com/joshualat/Pluralize.swift">
+        Great String Pluralize Extension.
+      </Card>
+      <Card title="PredicateFlow" href="https://github.com/andreadelfante/PredicateFlow">
+        A builder for writing strongly-typed, easy-to-read NSPredicate expressions.
+      </Card>
+      <Card title="PrediKit" href="https://github.com/KrakenDev/PrediKit">
+        An NSPredicate DSL for iOS and OS X inspired by SnapKit.
+      </Card>
+      <Card title="Regex by crossroadlabs" href="https://github.com/crossroadlabs/Regex">
+        Easy-to-use regular expressions library with rich functionality and operator-based API. Linux compatible.
+      </Card>
+      <Card title="Regex by sindresorhus" href="https://github.com/sindresorhus/Regex">
+        Swifty regular expressions, fully tested and documented with correct Unicode handling.
+      </Card>
+      <Card title="RichEditorView" href="https://github.com/cjwirth/RichEditorView">
+        A simple, modular, drop-in UIView subclass for rich text editing.
+      </Card>
+      <Card title="Sprinter" href="https://github.com/nicklockwood/Sprinter">
+        A library for formatting strings.
+      </Card>
+      <Card title="SwiftRichString" href="https://github.com/malcommac/SwiftRichString">
+        Elegant and painless attributed strings management library.
+      </Card>
+      <Card title="SwiftVerbalExpressions" href="https://github.com/VerbalExpressions/SwiftVerbalExpressions">
+        VerbalExpressions porting for Swift.
+      </Card>
+      <Card title="SwiftyAttributes" href="https://github.com/eddiekaiger/SwiftyAttributes">
+        Extensions that make it a breeze to work with attributed strings.
+      </Card>
+      <Card title="Tagging" href="https://github.com/k-lpmg/Tagging">
+        A TextView that provides easy-to-use tagging for mentions or hashtags.
+      </Card>
+      <Card title="Texstyle" href="https://github.com/rosberry/texstyle">
+        Allows you to format attributed strings easily.
+      </Card>
+      <Card title="TextAttributes" href="https://github.com/delba/TextAttributes">
+        An easier way to compose attributed strings.
+      </Card>
+      <Card title="TextBuilder" href="https://github.com/davdroman/swiftui-text-builder">
+        Like a SwiftUI ViewBuilder, but for Text.
+      </Card>
+      <Card title="TwitterTextEditor" href="https://github.com/twitter/TwitterTextEditor">
+        A standalone, flexible API providing a full-featured rich text editor for iOS applications.
+      </Card>
+      <Card title="VEditorKit" href="https://github.com/GeekTree0101/VEditorKit">
+        Lightweight and powerful editor kit.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Utility & Kit">
+    General-purpose utility libraries, Swift extensions, and simplified API kits.
+
+    <CardGroup cols={2}>
+      <Card title="BFKit-Swift" href="https://github.com/FabrizioBrancati/BFKit-Swift">
+        A collection of useful classes, structs, and extensions to develop apps faster. Linux compatible.
+      </Card>
+      <Card title="C4iOS" href="https://github.com/C4Labs/C4iOS">
+        Harnesses the power of native iOS programming with a simplified API.
+      </Card>
+      <Card title="ContactsChangeNotifier" href="https://github.com/yonat/ContactsChangeNotifier">
+        Detect which contacts changed outside your app with improved CNContactStoreDidChange notifications.
+      </Card>
+      <Card title="AlexaSkillsKit" href="https://github.com/choefele/AlexaSkillsKit">
+        Develop custom Alexa Skills with Swift.
+      </Card>
+      <Card title="ApplyStyleKit" href="https://github.com/shindyu/ApplyStyleKit">
+        Elegantly apply styles to UIKit using method chaining.
+      </Card>
+      <Card title="Basis" href="https://github.com/typelift/Basis">
+        Pure declarative programming in Swift.
+      </Card>
+      <Card title="Bow" href="https://github.com/bow-swift/bow">
+        Companion library for typed functional programming in Swift.
+      </Card>
+      <Card title="CallbackURLKit" href="https://github.com/phimage/CallbackURLKit">
+        Implementation of x-callback-url for inter-app communication.
+      </Card>
+      <Card title="Closures" href="https://github.com/vhesener/Closures">
+        Swifty closures for UIKit and Foundation.
+      </Card>
+      <Card title="Codextended" href="https://github.com/JohnSundell/Codextended">
+        Extensions giving Codable API type inference super powers.
+      </Card>
+      <Card title="Curry" href="https://github.com/thoughtbot/Curry">
+        Function currying in Swift.
+      </Card>
+      <Card title="Delegated" href="https://github.com/dreymonde/Delegated">
+        Closure-based delegation without memory leaks.
+      </Card>
+      <Card title="DifferenceKit" href="https://github.com/ra1028/DifferenceKit">
+        A fast and flexible O(n) difference algorithm framework.
+      </Card>
+      <Card title="Differific" href="https://github.com/zenangst/Differific">
+        A fast and convenient diffing framework.
+      </Card>
+      <Card title="Dollar" href="https://github.com/ankurp/Dollar">
+        Functional utility library similar to Lo-Dash or Underscore in JavaScript.
+      </Card>
+      <Card title="DuctTape" href="https://github.com/marty-suzuki/DuctTape">
+        KeyPath dynamicMemberLookup based syntax sugar for Swift.
+      </Card>
+      <Card title="EtherWalletKit" href="https://github.com/SteadyAction/EtherWalletKit">
+        Ethereum wallet toolkit for iOS without requiring a server or blockchain knowledge.
+      </Card>
+      <Card title="ExceptionCatcher" href="https://github.com/sindresorhus/ExceptionCatcher">
+        Catch Objective-C exceptions in Swift.
+      </Card>
+      <Card title="EZSwiftExtensions" href="https://github.com/Esqarrouth/EZSwiftExtensions">
+        Standard types and classes working the way they should have from the start.
+      </Card>
+      <Card title="GoodExtensions-iOS" href="https://github.com/GoodRequest/GoodExtensions-iOS">
+        A collection of useful and frequently used Swift extensions.
+      </Card>
+      <Card title="GoodUIKit" href="https://github.com/GoodRequest/GoodUIKit">
+        Extensions library filled with reusable UI snippets for faster development.
+      </Card>
+      <Card title="Highlighter" href="https://github.com/younatics/Highlighter">
+        Highlight whatever you want across UILabel, UITextView, UITextField, and UIButton.
+      </Card>
+      <Card title="LifetimeTracker" href="https://github.com/krzysztofzablocki/LifetimeTracker">
+        Surface retain cycle and memory issues right as you develop your application.
+      </Card>
+      <Card title="Lumos" href="https://github.com/sushinoya/Lumos">
+        An easy-to-use API for Objective-C runtime functions.
+      </Card>
+      <Card title="ObjectiveKit" href="https://github.com/marmelroy/ObjectiveKit">
+        API for Objective-C runtime functions in Swift.
+      </Card>
+      <Card title="Percentage" href="https://github.com/sindresorhus/Percentage">
+        Make percentages more readable and type-safe.
+      </Card>
+      <Card title="Periphery" href="https://github.com/peripheryapp/periphery">
+        A tool to identify unused code in Swift projects.
+      </Card>
+      <Card title="Playbook" href="https://github.com/playbook-ui/playbook-ios">
+        A library for isolated UI component development with automatic snapshots.
+      </Card>
+      <Card title="PrivacyFlash Pro" href="https://github.com/privacy-tech-lab/privacyflash-pro">
+        Generate a privacy policy for your Swift iOS app from its code.
+      </Card>
+      <Card title="R.swift" href="https://github.com/mac-cain13/R.swift">
+        Tool to get strongly typed, autocompleted resources like images, cells, and segues.
+      </Card>
+      <Card title="RandomKit" href="https://github.com/nvzqz/RandomKit/">
+        Random data generation for Swift. Linux compatible.
+      </Card>
+      <Card title="ReadabilityKit" href="https://github.com/exyte/ReadabilityKit">
+        Preview extractor for news, articles, and full-texts.
+      </Card>
+      <Card title="ReerKit" href="https://github.com/reers/ReerKit">
+        Powerful Swift foundation library of extensions and utility functions for iOS/macOS/Linux.
+      </Card>
+      <Card title="ResourceKit" href="https://github.com/bannzai/ResourceKit">
+        Enable autocomplete use of resources in Swift.
+      </Card>
+      <Card title="Result" href="https://github.com/antitypical/Result">
+        Type modelling the success/failure of arbitrary operations.
+      </Card>
+      <Card title="Rugby" href="https://github.com/swiftyfinch/Rugby">
+        Cache CocoaPods for faster rebuild and indexing of Xcode projects.
+      </Card>
+      <Card title="Runes" href="https://github.com/thoughtbot/Runes">
+        Functional operators for Swift: flatMap, map, apply.
+      </Card>
+      <Card title="Solar" href="https://github.com/ceeK/Solar">
+        Calculate sunrise and sunset times given a location.
+      </Card>
+      <Card title="Sugar" href="https://github.com/hyperoslo/Sugar">
+        Something sweet that goes great with your Cocoa.
+      </Card>
+      <Card title="SwiftAutoGUI" href="https://github.com/NakaokaRei/SwiftAutoGUI">
+        Programmatically control the mouse and keyboard on macOS.
+      </Card>
+      <Card title="SwiftBoost" href="https://github.com/sparrowcode/SwiftBoost">
+        Collection of Swift extensions to boost the development process.
+      </Card>
+      <Card title="SwifterSwift" href="https://github.com/SwifterSwift/SwifterSwift">
+        A handy collection of more than 500 native Swift extensions.
+      </Card>
+      <Card title="SwiftLinkPreview" href="https://github.com/LeonardoCardoso/SwiftLinkPreview">
+        Generates a preview from a URL, grabbing title, relevant texts, and images.
+      </Card>
+      <Card title="SwiftRandom" href="https://github.com/thellimist/SwiftRandom">
+        A tiny generator of random data.
+      </Card>
+      <Card title="SwiftRater" href="https://github.com/takecian/SwiftRater">
+        A utility that reminds your app's users to review the app.
+      </Card>
+      <Card title="SwiftTweaks" href="https://github.com/bryanjclark/SwiftTweaks">
+        Tweak your iOS app without recompiling.
+      </Card>
+      <Card title="SwiftyUtils" href="https://github.com/tbaranes/SwiftyUtils">
+        All the reusable code that we need in each project.
+      </Card>
+      <Card title="Then" href="https://github.com/devxoul/Then">
+        Super sweet syntactic sugar for Swift initializers.
+      </Card>
+      <Card title="Vaccine" href="https://github.com/zenangst/Vaccine">
+        Make your apps immune to recompile-disease with injection support.
+      </Card>
+      <Card title="WeakableSelf" href="https://github.com/vincent-pradeilles/weakable-self">
+        A micro-framework to encapsulate [weak self] and guard statements within closures.
+      </Card>
+      <Card title="WhatsNewKit" href="https://github.com/SvenTiigi/WhatsNewKit">
+        Showcase your awesome new app features after an update.
+      </Card>
+      <Card title="XestiMonitors" href="https://github.com/eBardX/XestiMonitors">
+        An extensible monitoring framework for iOS.
+      </Card>
+      <Card title="ZamzamKit" href="https://github.com/basememara/ZamzamKit">
+        A collection of micro utilities and extensions for Standard Library, Foundation, and UIKit.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Version Manager">
+    Libraries for tracking, comparing, and prompting app version updates.
+
+    <CardGroup cols={2}>
+      <Card title="AppVersionMonitor" href="https://github.com/eure/AppVersionMonitor">
+        Monitor iOS app version easily.
+      </Card>
+      <Card title="Siren" href="https://github.com/ArtSabintsev/Siren">
+        Notify users when a new version of your app is available and prompt them to upgrade.
+      </Card>
+      <Card title="Version" href="https://github.com/mrackwitz/Version">
+        Represents and compares semantic versions.
+      </Card>
+      <Card title="Version Tracker Swift" href="https://github.com/tbaranes/VersionTrackerSwift">
+        Versions tracker for your iOS, OS X, and tvOS app.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Localization">
+    Frameworks for localizing iOS and macOS apps — string extraction, translation sync, and runtime language switching.
+
+    <CardGroup cols={2}>
+      <Card title="BartyCrouch" href="https://github.com/FlineDev/BartyCrouch">
+        Incrementally update and translate your Strings files from code and Storyboards/XIBs.
+      </Card>
+      <Card title="CrowdinSDK" href="https://github.com/crowdin/mobile-sdk-ios">
+        Delivers all new translations from a Crowdin project to the app immediately — no resubmission required.
+      </Card>
+      <Card title="IBLocalizable" href="https://github.com/PiXeL16/IBLocalizable">
+        Localize your views directly in Interface Builder.
+      </Card>
+      <Card title="L10n-swift" href="https://github.com/Decybel07/L10n-swift">
+        Localization with ability to change language on the fly and support for plural forms in any language.
+      </Card>
+      <Card title="LocalizationKit" href="https://github.com/willpowell8/LocalizationKit_iOS">
+        Realtime dynamic localization with remote management — deploy translation updates without resubmitting to the App Store.
+      </Card>
+      <Card title="Localize" href="https://github.com/andresilvagomez/Localize">
+        Localize apps using regular expressions in Localizable.strings.
+      </Card>
+      <Card title="Localize-Swift" href="https://github.com/marmelroy/Localize-Swift">
+        Localize apps using regular expressions in Localizable.strings with in-app language switching.
+      </Card>
+      <Card title="Locheck" href="https://github.com/Asana/locheck">
+        Validate .strings and .stringsdict files for errors.
+      </Card>
+      <Card title="SwiftGen-L10n" href="https://github.com/SwiftGen/SwiftGen#localizablestrings">
+        Auto-generate enums for all your Localizable.strings keys with associated values for format placeholders.
+      </Card>
+      <Card title="Translatio" href="https://github.com/andrealufino/Translatio">
+        Super lightweight library to localize strings, even directly in storyboards.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+</AccordionGroup>

@@ -1,0 +1,74 @@
+---
+title: "Boilerplates and REPL"
+description: "Project templates to kickstart your Swift apps and online playgrounds for quick experimentation."
+---
+
+Use a project template to avoid repetitive setup when starting a new Swift app, or use an online playground when you want to experiment with Swift without opening Xcode.
+
+## Project templates
+
+<CardGroup cols={3}>
+  <Card title="iOS project template" icon="mobile" href="https://github.com/messeb/ios-project-template">
+    A ready-to-use iOS project template with fastlane lanes, Travis CI jobs, and GitHub integrations for Codecov, HoundCI (SwiftLint), and Danger.
+  </Card>
+  <Card title="Model-View-Presenter template" icon="diagram-project" href="https://github.com/onl1ner/ios-mvp-template">
+    A flexible iOS application template structured around the Model-View-Presenter (MVP) pattern. Designed to speed up initial project setup while keeping architecture consistent.
+  </Card>
+  <Card title="Swift Module Template" icon="cube" href="https://github.com/fulldecent/swift6-module-template">
+    An opinionated starting point for reusable, open-source Swift modules. Includes a sensible directory layout, CI configuration, and best practices for Swift package authoring.
+  </Card>
+</CardGroup>
+
+### When to use a template
+
+<AccordionGroup>
+  <Accordion title="iOS project template" icon="mobile">
+    Choose this template when you want CI/CD set up from day one. It comes pre-configured with:
+
+    - **fastlane** lanes for building, testing, and deploying
+    - **Travis CI** pipeline configuration
+    - **Codecov** for test coverage reporting
+    - **HoundCI** for automated SwiftLint code review
+    - **Danger** for pull request automation
+
+    It is a good fit for team projects where code quality tooling should be standardised before the first commit.
+  </Accordion>
+
+  <Accordion title="Model-View-Presenter template" icon="diagram-project">
+    Choose this template when your team has adopted MVP as the architectural pattern. The template enforces a clear separation between:
+
+    - **Model** — data and business logic
+    - **View** — UIKit view controllers and views
+    - **Presenter** — presentation logic that mediates between Model and View
+
+    It removes the decision fatigue of where to put each piece of code, so you can focus on features immediately.
+  </Accordion>
+
+  <Accordion title="Swift Module Template" icon="cube">
+    Choose this template when creating a standalone Swift package or open-source library. It covers:
+
+    - Swift package manifest (`Package.swift`) for Swift 6
+    - Directory layout following community conventions
+    - Example tests and documentation stubs
+    - Licencing and contributing guidelines
+
+    It is the fastest way to publish a well-structured Swift package on GitHub.
+  </Accordion>
+</AccordionGroup>
+
+## Online playgrounds (REPL)
+
+Run Swift code directly in your browser — no installation, no Xcode, no setup.
+
+<CardGroup cols={2}>
+  <Card title="Online Swift Playground" icon="play" href="http://online.swiftplayground.run">
+    A straightforward browser-based Swift REPL. Write Swift code and run it instantly. Useful for testing snippets, checking syntax, and learning Swift concepts quickly.
+  </Card>
+  <Card title="SwiftFiddle" icon="share-nodes" href="https://swiftfiddle.com">
+    An online Swift playground focused on sharing. Create a snippet, run it, and share a permanent link with others. Supports embedding Swift code in web pages and selecting different Swift versions.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Use **SwiftFiddle** when you want to share a reproducible Swift example with a colleague or in a GitHub issue. Use **Online Swift Playground** for quick personal experiments.
+</Tip>

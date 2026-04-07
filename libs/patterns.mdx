@@ -1,0 +1,119 @@
+---
+title: "App architecture patterns"
+description: "Swift frameworks and examples for MVC, MVVM, VIPER, Redux, TCA, and other iOS architecture patterns."
+---
+
+Choosing the right architecture pattern is one of the most consequential decisions in an iOS project. A clear architecture separates concerns, makes code testable, and keeps large codebases maintainable as teams and features grow.
+
+## Comparing the main approaches
+
+<AccordionGroup>
+  <Accordion title="MVC — Model-View-Controller">
+    The default UIKit pattern. The controller mediates between model and view. Works well for small screens but tends to produce "Massive View Controllers" as complexity grows. `StateViewController` below is a direct response to this problem.
+  </Accordion>
+  <Accordion title="MVVM — Model-View-ViewModel">
+    The view model exposes transformed data and handles user intent, keeping the view passive. Pairs naturally with reactive bindings (Combine, RxSwift). SwiftUI's data-flow model is essentially MVVM.
+  </Accordion>
+  <Accordion title="VIPER — View-Interactor-Presenter-Entity-Router">
+    Strict five-layer separation originally popularized for large UIKit apps. Each layer has a single responsibility and communicates via protocols. High ceremony but very testable. See `Viperit` below.
+  </Accordion>
+  <Accordion title="Redux / Unidirectional data flow">
+    A single immutable state store is updated through pure reducer functions triggered by actions. Predictable, easy to log and replay, and straightforward to test. `ReSwift`, `ReduxUI`, and TCA all follow this model.
+  </Accordion>
+  <Accordion title="TCA — The Composable Architecture">
+    Builds on Redux ideas with explicit effects, dependency injection, and composable reducers. The current community favourite for SwiftUI applications at scale.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  There is no universally correct choice. MVC is fine for simple screens; TCA or MVVM work well for complex SwiftUI apps; VIPER remains popular for large UIKit teams that need strict boundaries.
+</Tip>
+
+## Libraries and examples
+
+<CardGroup cols={2}>
+  <Card
+    title="App Architecture"
+    icon="book-open"
+    href="https://github.com/objcio/app-architecture"
+  >
+    Sample code from the objc.io *App Architecture* book. Demonstrates the same app implemented in MVC, MVVM, and other patterns side-by-side.
+  </Card>
+  <Card
+    title="CleanArchitectureRxSwift"
+    icon="layer-group"
+    href="https://github.com/sergdort/ModernCleanArchitectureSwiftUI"
+  >
+    A full example of Clean Architecture on iOS using RxSwift. Illustrates how to separate domain, data, and presentation layers in a real codebase.
+  </Card>
+  <Card
+    title="Design-Patterns-In-Swift"
+    icon="shapes"
+    href="https://github.com/ochococo/Design-Patterns-In-Swift"
+  >
+    Concise Swift implementations of classic GoF design patterns (creational, structural, behavioral). Useful as a reference when applying patterns within any architecture.
+  </Card>
+  <Card
+    title="GoodReactor"
+    icon="atom"
+    href="https://github.com/GoodRequest/GoodReactor"
+  >
+    A Redux-inspired Reactor framework for communication between view model, view controller, and coordinator. Implements unidirectional data flow with coordinator-based navigation.
+  </Card>
+  <Card
+    title="Reactant"
+    icon="bolt"
+    href="https://github.com/Brightify/Reactant"
+  >
+    A reactive architecture for iOS that combines a component model with reactive data flow. Reduces boilerplate for UIKit-based MVVM apps.
+  </Card>
+  <Card
+    title="ReduxUI"
+    icon="arrow-right-arrow-left"
+    href="https://github.com/gre4ixin/ReduxUI"
+  >
+    Redux for SwiftUI. Implements a global store, actions, and reducers that integrate naturally with SwiftUI's view update model.
+  </Card>
+  <Card
+    title="SimplexArchitecture"
+    icon="diagram-project"
+    href="https://github.com/Ryu0118/swiftui-simplex-architecture"
+  >
+    A lightweight architecture that decouples state changes from SwiftUI views. Keeps reducers and state logic outside the view hierarchy without the overhead of TCA.
+  </Card>
+  <Card
+    title="Spin"
+    icon="rotate"
+    href="https://github.com/Spinners/Spin.Swift"
+  >
+    A versatile feedback-loop implementation (MVI / Redux cycle) that works with RxSwift, ReactiveSwift, and Combine. Write your business logic once and connect it to whichever reactive framework you prefer.
+  </Card>
+  <Card
+    title="StateViewController"
+    icon="window-restore"
+    href="https://github.com/davidask/StateViewController"
+  >
+    Stateful `UIViewController` composition. Addresses the Massive View Controller problem in MVC by delegating child view controllers per state, keeping each controller small and focused.
+  </Card>
+  <Card
+    title="SwiftUI Atom Properties"
+    icon="link"
+    href="https://github.com/ra1028/swiftui-atom-properties"
+  >
+    Reactive data binding and dependency injection for SwiftUI using an atom-based model (inspired by Recoil). Works with Swift Concurrency for async data flows.
+  </Card>
+  <Card
+    title="The Composable Architecture (TCA)"
+    icon="cubes"
+    href="https://github.com/pointfreeco/swift-composable-architecture"
+  >
+    The community-standard library for building SwiftUI apps with unidirectional data flow. Provides composable reducers, testable effects, and first-class support for Swift Concurrency and Observation.
+  </Card>
+  <Card
+    title="Viperit"
+    icon="sitemap"
+    href="https://github.com/ferranabello/Viperit"
+  >
+    A VIPER framework for iOS that scaffolds the five VIPER layers and the communication protocols between them, reducing the boilerplate cost of adopting VIPER.
+  </Card>
+</CardGroup>

@@ -1,0 +1,156 @@
+---
+title: "Miscellaneous tools"
+description: "Code generation, Xcode project management, build tools, and other Swift developer utilities."
+---
+
+A curated set of tools that improve Swift development workflows, from generating boilerplate code to managing Xcode projects at scale.
+
+<Tabs>
+  <Tab title="Code generation">
+    Tools that automatically generate Swift source code from models, specs, or assets.
+
+    <CardGroup cols={2}>
+      <Card title="SwiftGen" icon="wand-sparkles" href="https://github.com/SwiftGen/SwiftGen">
+        Auto-generates type-safe Swift code for project assets: images, colors, localizable strings, storyboards, and more. Eliminates stringly-typed resource access.
+      </Card>
+      <Card title="SwagGen" icon="file-code" href="https://github.com/yonaskolb/SwagGen">
+        Generates a REST API client from a Swagger/OpenAPI specification using Stencil templates. Cross-platform (Linux-compatible).
+      </Card>
+      <Card title="Fugen" icon="figma" href="https://github.com/almazrafi/Fugen">
+        Exports design resources and generates Swift code from Figma files. Keeps design tokens (colors, typography, spacing) in sync between design and code.
+      </Card>
+      <Card title="MemberwiseInit" icon="code" href="https://github.com/gohanlon/swift-memberwise-init-macro">
+        A Swift macro (`@MemberwiseInit`) that generates memberwise initializers with the same safe-by-default semantics as Swift's built-in memberwise init, with more control over visibility and defaults.
+      </Card>
+      <Card title="BetterCodable" icon="layer-group" href="https://github.com/marksands/BetterCodable">
+        Property wrappers that improve the ergonomics of `Codable`. Avoid writing custom `init(from:)` implementations for common patterns like date formatting, default values, and lossy arrays.
+      </Card>
+      <Card title="CodableWrappers" icon="brackets-curly" href="https://github.com/GottaGetSwifty/CodableWrappers">
+        A collection of property wrappers that make custom serialization of `Codable` types straightforward and composable.
+      </Card>
+      <Card title="Model2App" icon="table" href="https://github.com/Q-Mobile/Model2App">
+        Turns a Swift data model into a working CRUD app automatically. Useful for rapid prototyping.
+      </Card>
+      <Card title="Zolang" icon="language" href="https://github.com/Zolang/Zolang">
+        A domain-specific language for generating code in multiple programming languages from a single source. Cross-platform.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Project management">
+    Tools for generating, managing, and scaling Xcode projects.
+
+    <CardGroup cols={2}>
+      <Card title="XcodeGen" icon="file-code" href="https://github.com/yonaskolb/XcodeGen">
+        Generates an Xcode project file from a YAML specification and your project directory. Eliminates merge conflicts in `.xcodeproj` files and makes project structure auditable in version control.
+      </Card>
+      <Card title="Tuist" icon="diagram-project" href="https://github.com/tuist/tuist">
+        An open-source CLI tool for creating, maintaining, and scaling Xcode projects. Provides project generation, a module graph, build caching, and team-level conventions for large codebases.
+      </Card>
+      <Card title="xcodeproj" icon="folder-open" href="https://github.com/tuist/xcodeproj">
+        A Swift library (from the Tuist team) for reading, updating, and writing Xcode project and workspace files programmatically. Used as a foundation by Tuist and XcodeGen.
+      </Card>
+      <Card title="SwiftKit" icon="rocket" href="https://github.com/SvenTiigi/SwiftKit">
+        A CLI tool that scaffolds a new open-source Swift framework with sensible defaults: documentation, CI, and package manifest included.
+      </Card>
+      <Card title="SwiftPlate" icon="copy" href="https://github.com/JohnSundell/SwiftPlate">
+        Generates cross-platform Swift framework projects from the command line. Quickly produces an Xcode project that compiles for iOS, macOS, watchOS, and tvOS.
+      </Card>
+      <Card title="Swiftbrew" icon="beer-mug-empty" href="https://github.com/swiftbrew/Swiftbrew">
+        Homebrew for Swift packages. Installs Swift package executables globally, similar to how Homebrew installs system tools.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Xcode tools">
+    Tools that improve the Xcode build and development experience.
+
+    <CardGroup cols={2}>
+      <Card title="xcbeautify" icon="paintbrush" href="https://github.com/cpisciotta/xcbeautify">
+        Reformats `xcodebuild` output into a readable, human-friendly format. Particularly useful in CI pipelines where raw `xcodebuild` logs are hard to parse.
+      </Card>
+      <Card title="xcprofiler" icon="gauge-high" href="https://github.com/giginet/xcprofiler">
+        A command-line tool for profiling Swift compilation times. Identifies files and expressions that are slowing down your build.
+      </Card>
+      <Card title="xc" icon="folder" href="https://github.com/s2mr/xc">
+        Opens the correct Xcode project or workspace file for the current directory, with support for selecting a specific Xcode version. Useful in repositories that pin to a particular Xcode release.
+      </Card>
+      <Card title="Toybox" icon="box-open" href="https://github.com/giginet/Toybox">
+        Manages Xcode Playgrounds from the command line. Create, list, and open playgrounds without opening Xcode.
+      </Card>
+      <Card title="Surmagic" icon="wrench" href="https://github.com/gurhub/surmagic">
+        A CLI tool that builds XCFrameworks for multiple platforms (iOS, Mac Catalyst, tvOS, macOS, watchOS) in a single command.
+      </Card>
+      <Card title="Swiftify" icon="arrow-right-arrow-left" href="https://swiftify.com/#/converter/code/">
+        An online code converter and Xcode extension that translates Objective-C code to Swift. Useful when migrating legacy codebases.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Code quality">
+    Tools for improving correctness, data handling, and shared state management.
+
+    <CardGroup cols={2}>
+      <Card title="Beak" icon="terminal" href="https://github.com/yonaskolb/Beak">
+        A CLI interface for Swift scripts. Annotate top-level functions in a Swift file and Beak will expose them as runnable commands, with argument parsing and help text generated automatically.
+      </Card>
+      <Card title="Forked" icon="code-branch" href="https://github.com/drewmccormack/Forked">
+        A generalized approach to managing shared mutable data in Swift applications. Designed to support local-first apps where multiple processes or devices can modify the same data concurrently.
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>
+
+## Code quality tools
+
+Linters, formatters, and static analysis tools for Swift codebases.
+
+| Library | Description |
+|---------|-------------|
+| [SwiftLint](https://github.com/realm/SwiftLint) | The standard tool for enforcing Swift coding conventions. Integrates with Xcode and CI. |
+| [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) | Code library and command-line tool for reformatting Swift code. |
+| [AnyLint](https://github.com/FlineDev/AnyLint) | Lint anything by combining the power of Swift and regular expressions. Linux compatible. |
+| [IBLinter](https://github.com/IBDecodable/IBLinter) | A linter tool for Interface Builder `.xib` and `.storyboard` files. |
+| [L10nLint](https://github.com/s2mr/L10nLint) | A linter tool for `Localizable.strings` files. |
+| [swift-mod](https://github.com/ra1028/swift-mod) | A tool for Swift code modification, intermediating between code generation and formatting. |
+| [SwiftCop](https://github.com/andresinaka/SwiftCop) | A validation library inspired by Ruby on Rails Active Record validations. |
+| [Swimat](https://github.com/Jintin/Swimat) | An Xcode plugin for formatting Swift code. |
+
+## Command line libraries
+
+Swift libraries for building command line tools and terminal interfaces.
+
+| Library | Description |
+|---------|-------------|
+| [Ashen](https://github.com/colinta/Ashen) | A framework for writing terminal applications in Swift based on The Elm Architecture. |
+| [Commander](https://github.com/kylef/Commander) | Compose beautiful command line interfaces. Linux compatible. |
+| [Guaka](https://github.com/nsomar/Guaka) | The smart and beautiful POSIX-compliant command line framework. Linux compatible. |
+| [LineNoise](https://github.com/andybest/linenoise-swift) | A zero-dependency replacement for readline. Linux compatible. |
+| [Mocker](https://github.com/us/mocker) | Docker-compatible container CLI for macOS, built on Apple's Containerization framework. |
+| [nef](https://github.com/bow-swift/nef) | Command line tools for compile-time verification of documentation written as Xcode Playgrounds. |
+| [Progress.swift](https://github.com/jkandzi/Progress.swift) | Add beautiful progress bars to your command line. Linux compatible. |
+| [Swift Argument Parser](https://github.com/apple/swift-argument-parser) | Straightforward, type-safe argument parsing for Swift from Apple. |
+| [SwiftCLI](https://github.com/jakeheis/SwiftCLI) | A powerful framework for developing CLI tools in Swift. Linux compatible. |
+| [Swiftline](https://github.com/nsomar/Swiftline) | A set of tools to help you create command line applications. |
+| [SwiftShell](https://github.com/kareman/SwiftShell) | A library for creating command-line applications and running shell commands. |
+| [SwiftyTextTable](https://github.com/scottrhoyt/SwiftyTextTable) | A lightweight library to generate text tables. Linux compatible. |
+
+## Quick reference
+
+<AccordionGroup>
+  <Accordion title="Eliminate .xcodeproj merge conflicts">
+    Use [XcodeGen](https://github.com/yonaskolb/XcodeGen) or [Tuist](https://github.com/tuist/tuist) to generate your `.xcodeproj` from source-controlled YAML or Swift files. Generated project files are never committed, so merge conflicts disappear entirely.
+  </Accordion>
+
+  <Accordion title="Speed up CI builds">
+    Run [xcprofiler](https://github.com/giginet/xcprofiler) locally to find slow-to-compile expressions. Pipe `xcodebuild` output through [xcbeautify](https://github.com/cpisciotta/xcbeautify) in CI to make logs actionable.
+  </Accordion>
+
+  <Accordion title="Keep asset code type-safe">
+    Add [SwiftGen](https://github.com/SwiftGen/SwiftGen) to your build process to generate enums for images, colors, strings, and storyboards. Combine with [Fugen](https://github.com/almazrafi/Fugen) if your design tokens live in Figma.
+  </Accordion>
+
+  <Accordion title="Generate API clients from OpenAPI specs">
+    Use [SwagGen](https://github.com/yonaskolb/SwagGen) with a Stencil template to generate a typed Swift API client from your backend's OpenAPI specification. Re-run generation whenever the spec changes to stay in sync automatically.
+  </Accordion>
+</AccordionGroup>

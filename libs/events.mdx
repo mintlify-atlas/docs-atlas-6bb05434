@@ -1,0 +1,222 @@
+---
+title: "Events & reactive programming"
+description: "Swift libraries for reactive programming, observables, promises, event buses, and state management."
+---
+
+Swift offers several models for handling asynchronous events and state changes: reactive streams, promises/futures, observable bindings, event buses, and unidirectional state machines. The sections below group the most popular libraries by approach so you can pick the right tool for your architecture.
+
+<Note>
+  Apple's **Combine** framework (iOS 13+) is built into the SDK. Many libraries below either wrap Combine, extend it, or provide similar functionality for older OS targets or different programming models.
+</Note>
+
+<Tabs>
+  <Tab title="Reactive programming">
+    Reactive programming treats values as streams that can be composed, filtered, and transformed over time. These libraries are the foundation for reactive architectures like MVVM with bindings and ReactorKit.
+
+    <CardGroup cols={2}>
+      <Card
+        title="RxSwift"
+        icon="r"
+        href="https://github.com/ReactiveX/RxSwift"
+      >
+        The Swift port of ReactiveX. Provides observable sequences, operators, and schedulers. The most widely adopted reactive library in the iOS ecosystem, with a large collection of companion libraries (RxCocoa, RxDataSources, etc.).
+      </Card>
+      <Card
+        title="ReactiveCocoa"
+        icon="signal"
+        href="https://github.com/ReactiveCocoa/ReactiveCocoa"
+      >
+        Functional Reactive Programming for Cocoa. Provides APIs for composing and transforming streams of values over time. Predates RxSwift and uses its own Signal/SignalProducer model.
+      </Card>
+      <Card
+        title="OpenCombine"
+        icon="code-branch"
+        href="https://github.com/OpenCombine/OpenCombine"
+      >
+        Open source implementation of Apple's Combine framework. Enables Combine-compatible code on Linux and older Apple OS versions that don't support Combine natively.
+      </Card>
+      <Card
+        title="Combinative"
+        icon="merge"
+        href="https://github.com/noppefoxwolf/Combinative"
+      >
+        UI event handling using Apple's Combine framework. Provides Combine-based wrappers for common UIKit control events, reducing boilerplate when adopting Combine in UIKit apps.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Promises & futures">
+    Promises and futures represent a single asynchronous value that resolves (or rejects) once. They are useful for one-shot async operations like network requests before Swift Concurrency (`async/await`) became available.
+
+    <CardGroup cols={2}>
+      <Card
+        title="PromiseKit"
+        icon="circle-check"
+        href="https://github.com/mxcl/PromiseKit"
+      >
+        The most widely used promise library for Swift and Objective-C. Provides a chainable `.then`/`.catch`/`.finally` API and extensions for URLSession, CoreLocation, UIKit, and more.
+      </Card>
+      <Card
+        title="Tomorrowland"
+        icon="clock"
+        href="https://github.com/lilyball/Tomorrowland"
+      >
+        Lightweight promises with a focus on correctness and performance. Supports cancellation and context-aware callbacks to avoid retain cycles.
+      </Card>
+      <Card
+        title="When"
+        icon="hourglass"
+        href="https://github.com/vadymmarkov/When"
+      >
+        A lightweight implementation of Promises in Swift. Minimal API surface aimed at straightforward async chaining without large dependencies.
+      </Card>
+      <Card
+        title="FutureKit"
+        icon="forward"
+        href="https://github.com/FutureKit/FutureKit"
+      >
+        Future/Promise library for Swift with support for cancellation, chaining, and custom executors. Designed for use alongside Apple frameworks.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Observable & binding">
+    Observable wrappers let you attach observers to values and react when they change — the foundation of data binding in MVVM architectures.
+
+    <CardGroup cols={2}>
+      <Card
+        title="Bond"
+        icon="link"
+        href="https://github.com/DeclarativeHub/Bond"
+      >
+        A binding framework that connects observable data to UI controls. Provides reactive extensions for UIKit/AppKit and a simple Observable type, without requiring the full RxSwift stack.
+      </Card>
+      <Card
+        title="Observable"
+        icon="eye"
+        href="https://github.com/roberthein/Observable"
+      >
+        The easiest way to observe values in Swift. A minimal property-wrapper–style observable that notifies observers on change — ideal for simple MVVM bindings.
+      </Card>
+      <Card
+        title="LightweightObservable"
+        icon="feather"
+        href="https://github.com/fxm90/LightweightObservable"
+      >
+        A lightweight implementation of an observable sequence you can subscribe to. Zero dependencies; suitable for projects that don't need the full Combine or RxSwift stack.
+      </Card>
+      <Card
+        title="PMKVObserver"
+        icon="shield"
+        href="https://github.com/postmates/PMKVObserver/"
+      >
+        Modern thread-safe and type-safe key-value observing. Wraps KVO with a Swift-friendly API and automatic deregistration, eliminating common KVO pitfalls.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="Event bus">
+    Event buses implement publish-subscribe messaging between loosely coupled components without the setup overhead of delegation or notification center.
+
+    <CardGroup cols={2}>
+      <Card
+        title="SwiftEventBus"
+        icon="bus"
+        href="https://github.com/cesarferreira/SwiftEventBus"
+      >
+        A publish/subscribe event bus optimized for iOS. Supports posting events on the main thread or background, with automatic unsubscription when observers are deallocated.
+      </Card>
+      <Card
+        title="EmitterKit"
+        icon="tower-broadcast"
+        href="https://github.com/aleclarson/emitter-kit"
+      >
+        Implementation of typed event emitters and listeners. Inspired by Node.js EventEmitter; each `Emitter` instance manages its own set of typed listeners.
+      </Card>
+      <Card
+        title="Signals"
+        icon="satellite-dish"
+        href="https://github.com/artman/Signals"
+      >
+        Typed signals that replace delegates and `NSNotificationCenter`. Each `Signal` is a property on an object, making the event surface explicit and discoverable.
+      </Card>
+      <Card
+        title="Notificationz"
+        icon="bell"
+        href="https://github.com/SwiftKitz/Notificationz"
+      >
+        A simple, customizable adapter over `NSNotificationCenter`. Helps you own notification registration/deregistration with a cleaner Swift API and no stringly typed names.
+      </Card>
+      <Card
+        title="NoticeObserveKit"
+        icon="bell-ring"
+        href="https://github.com/marty-suzuki/NoticeObserveKit"
+      >
+        Type-safe `NotificationCenter` wrapper that associates a notice type with its payload type, eliminating manual `userInfo` casting.
+      </Card>
+      <Card
+        title="TopicEventBus"
+        icon="tags"
+        href="https://github.com/mcmatan/topicEventBus"
+      >
+        Publish-subscribe framework with topic-based routing. Subscribers filter events by topic, making it easy to build decoupled feature modules that communicate through named channels.
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="State management">
+    These libraries implement unidirectional data flow and/or flux-style state machines — a step beyond simple observables, providing a predictable way to manage complex application state.
+
+    <CardGroup cols={2}>
+      <Card
+        title="ReSwift"
+        icon="arrow-right"
+        href="https://github.com/ReSwift/ReSwift"
+      >
+        Unidirectional data flow in Swift, modeled after Redux. A single app state, pure reducers, and a store that notifies subscribers on each change. Framework-agnostic.
+      </Card>
+      <Card
+        title="ReactorKit"
+        icon="atom"
+        href="https://github.com/ReactorKit/ReactorKit"
+      >
+        A framework for reactive and unidirectional application architecture. Each screen has a `Reactor` (view model) that accepts `Action` inputs and exposes a `State` stream via RxSwift or Combine.
+      </Card>
+      <Card
+        title="OneWay"
+        icon="arrow-trend-up"
+        href="https://github.com/DevYeom/OneWay"
+      >
+        State management with unidirectional data flow. Provides a `Store` with typed `Action` and `State`, and effects support — a lighter-weight alternative to ReSwift or TCA.
+      </Card>
+      <Card
+        title="VueFlux"
+        icon="circle-nodes"
+        href="https://github.com/ra1028/VueFlux"
+      >
+        Unidirectional data flow state management inspired by Vuex and Flux. Organizes state into scoped `Store` objects with typed `Actions` and `Mutations`.
+      </Card>
+      <Card
+        title="Katana"
+        icon="layer-group"
+        href="https://github.com/BendingSpoons/katana-swift"
+      >
+        Write apps à la React and Redux. Provides a global store, typed actions, and side-effect management. Companion to the `Tempura` UI layer.
+      </Card>
+      <Card
+        title="Tempura"
+        icon="palette"
+        href="https://github.com/BendingSpoons/tempura-swift"
+      >
+        A holistic approach to iOS development inspired by Redux and MVVM. Works alongside Katana to connect a Redux-style store to UIKit views declaratively.
+      </Card>
+      <Card
+        title="Tokamak"
+        icon="fire"
+        href="https://github.com/TokamakUI/Tokamak"
+      >
+        React-like declarative API for building native UI components with one-way data binding. Targets SwiftUI-compatible environments and WebAssembly via a single codebase.
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>

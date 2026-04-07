@@ -1,0 +1,110 @@
+---
+title: "Security & authentication"
+description: "Swift libraries for cryptography, Keychain access, biometrics, and user authentication."
+---
+
+<AccordionGroup>
+
+  <Accordion title="Cryptography" icon="lock" defaultOpen={false}>
+    Libraries for encryption, hashing, and cryptographic operations in Swift.
+
+    <CardGroup cols={2}>
+      <Card title="BlueCryptor" href="https://github.com/Kitura/BlueCryptor" icon="key">
+        IBM's cross-platform crypto library built on CommonCrypto.
+      </Card>
+      <Card title="BlueRSA" href="https://github.com/Kitura/BlueRSA" icon="key">
+        IBM's cross-platform RSA crypto library.
+      </Card>
+      <Card title="CryptoSwift" href="https://github.com/krzyzanowskim/CryptoSwift" icon="key">
+        Crypto-related functions and helpers implemented in pure Swift. Linux compatible.
+      </Card>
+      <Card title="IDZSwiftCommonCrypto" href="https://github.com/iosdevzone/IDZSwiftCommonCrypto" icon="key">
+        A wrapper for Apple's CommonCrypto library with a Swift-friendly API.
+      </Card>
+      <Card title="JOSESwift" href="https://github.com/airsidemobile/JOSESwift" icon="key">
+        Framework for the JOSE standards — JWS, JWE, and JWK.
+      </Card>
+      <Card title="JWSETKit" href="https://github.com/amosavian/JWSETKit" icon="key">
+        JOSE library with support for JWS, JWT, JWE, and JWK.
+      </Card>
+      <Card title="RNCryptor" href="https://github.com/RNCryptor/RNCryptor" icon="key">
+        CCCryptor (Apple's AES encryption) wrappers for iOS and Mac.
+      </Card>
+      <Card title="SCrypto" href="https://github.com/sgl0v/scrypto" icon="key">
+        Elegant interface to access CommonCrypto routines.
+      </Card>
+      <Card title="Siphash" href="https://github.com/attaswift/SipHash" icon="key">
+        Simple and secure hashing using the SipHash algorithm.
+      </Card>
+      <Card title="Swift-Sodium" href="https://github.com/jedisct1/swift-sodium" icon="key">
+        Interface to the Sodium library for common crypto operations on iOS and macOS.
+      </Card>
+      <Card title="Themis" href="https://github.com/cossacklabs/themis" icon="key">
+        Multilanguage framework for typical encryption schemes: data at rest, authenticated exchange, transport protection, and authentication.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Keychain" icon="vault" defaultOpen={false}>
+    Libraries that simplify reading from and writing to the iOS and macOS Keychain.
+
+    <CardGroup cols={2}>
+      <Card title="GoodPersistence" href="https://github.com/GoodRequest/GoodPersistence" icon="vault">
+        Simplifies caching data in Keychain and UserDefaults using property wrappers.
+      </Card>
+      <Card title="keychain-swift" href="https://github.com/evgenyneu/keychain-swift" icon="vault">
+        Helper functions for saving text in Keychain securely across iOS, macOS, tvOS, and watchOS.
+      </Card>
+      <Card title="KeychainAccess" href="https://github.com/kishikawakatsumi/KeychainAccess" icon="vault">
+        Simple wrapper for Keychain that works on iOS and macOS.
+      </Card>
+      <Card title="Latch" href="https://github.com/endocrimes/Latch" icon="vault">
+        A simple Keychain wrapper for iOS.
+      </Card>
+      <Card title="SwiftKeychainWrapper" href="https://github.com/jrendel/SwiftKeychainWrapper" icon="vault">
+        Static wrapper for the iOS Keychain with an API similar to UserDefaults.
+      </Card>
+      <Card title="Valet" href="https://github.com/square/Valet" icon="vault">
+        Securely store data in the Keychain without needing to understand how the Keychain works.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Other security" icon="shield" defaultOpen={false}>
+    Libraries for secure storage, biometric authentication, and property-level security.
+
+    <CardGroup cols={2}>
+      <Card title="SecurePropertyStorage" href="https://github.com/alexruperez/SecurePropertyStorage" icon="shield">
+        Define secure storages for your properties using Swift property wrappers.
+      </Card>
+      <Card title="TouchBridge" href="https://github.com/HMAKT99/UnTouchID" icon="fingerprint">
+        Use your phone's fingerprint to authenticate on any Mac.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Authentication" icon="user-shield" defaultOpen={false}>
+    Libraries for implementing login flows, social sign-in, and user session management.
+
+    <CardGroup cols={2}>
+      <Card title="Cely" href="https://github.com/cely-tools/Cely" icon="right-to-bracket">
+        Plug-n-Play login framework for iOS — handles credential storage and login state.
+      </Card>
+      <Card title="LinkedInSignIn" href="https://github.com/serhii-londar/LinkedInSignIn" icon="right-to-bracket">
+        Simple view controller to log in and retrieve an access token from LinkedIn.
+      </Card>
+      <Card title="LoginKit" href="https://github.com/IcaliaLabs/LoginKit" icon="right-to-bracket">
+        Quick and easy way to add a login and signup UX to your iOS app.
+      </Card>
+      <Card title="ReCaptcha" href="https://github.com/fjcaetano/ReCaptcha" icon="right-to-bracket">
+        Invisible and visible ReCaptcha integration for iOS.
+      </Card>
+      <Card title="SpotifyLogin" href="https://github.com/spotify/SpotifyLogin" icon="right-to-bracket">
+        Authenticate with the Spotify API from your iOS app.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+</AccordionGroup>
+
+<Warning>Always review cryptographic library maintenance status and audit logs before using them in production. Prefer Apple's CryptoKit for new projects when it covers your use case.</Warning>

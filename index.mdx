@@ -1,97 +1,71 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Awesome Swift"
+description: "A collaborative curated list of awesome Swift libraries, frameworks, tools, and resources for iOS, macOS, tvOS, watchOS, and Linux development."
 ---
 
-## Setting up
+Awesome Swift is a community-maintained directory of over **1,000 Swift libraries and resources**. Whether you're building your first iOS app or architecting a complex SwiftUI project, this list helps you discover the best tools the Swift ecosystem has to offer.
 
-Get your documentation site up and running in minutes.
+<Info>
+  Libraries marked with 🐧 are compatible with Linux via Swift on Linux / Swift Package Manager.
+</Info>
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+## Explore the collection
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Introduction" icon="swift" href="/introduction">
+    Learn about this list, how it's organized, and how to get the most out of it.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Contributing" icon="code-pull-request" href="/contributing">
+    Add your favorite library or fix an entry — contributions are always welcome.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Learning Resources" icon="book-open" href="/guides/official-guides">
+    Official Swift guides, style guides, and curated third-party tutorials.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Development Tools" icon="wrench" href="/tools/dependency-managers">
+    Dependency managers, editor plugins, boilerplates, and productivity tools.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## Browse libraries by category
 
-Everything you need to create world-class documentation.
+<CardGroup cols={2}>
+  <Card title="UI & Animation" icon="paintbrush" href="/libs/ui">
+    Components, charts, alerts, buttons, transitions, and animation frameworks.
+  </Card>
+  <Card title="Data & Networking" icon="database" href="/libs/data-management">
+    Core Data, Realm, SQLite, JSON parsing, HTTP clients, and caching.
+  </Card>
+  <Card title="App Architecture" icon="sitemap" href="/libs/patterns">
+    MVC, MVVM, VIPER, Redux, Composable Architecture, and DI frameworks.
+  </Card>
+  <Card title="Device & Hardware" icon="microchip" href="/libs/hardware">
+    Bluetooth, camera, location, sensors, haptics, and ARKit.
+  </Card>
+  <Card title="Utilities & Testing" icon="flask" href="/libs/utility-testing">
+    Logging, testing frameworks, mocking, validation, and string utilities.
+  </Card>
+  <Card title="AI & Algorithms" icon="brain" href="/libs/ai-algorithm">
+    CoreML, neural networks, data structures, and mathematical utilities.
+  </Card>
+</CardGroup>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+## How to use this list
 
-## Need inspiration?
+<Steps>
+  <Step title="Find your category">
+    Browse the **Libraries** tab in the sidebar to find the category that matches what you need — UI, Networking, Security, and more.
+  </Step>
+  <Step title="Pick a library">
+    Each entry includes a link to the library's GitHub repository and a brief description. Look for the 🐧 badge if Linux compatibility matters to you.
+  </Step>
+  <Step title="Add it to your project">
+    Most libraries support Swift Package Manager. Add them via Xcode's package manager or in your `Package.swift` file.
+  </Step>
+  <Step title="Contribute back">
+    Found a great library that's missing? See the [contributing guide](/contributing) to submit a pull request.
+  </Step>
+</Steps>
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Tip>
+  This list is generated from [contents.json](https://github.com/matteocrippa/awesome-swift/blob/master/contents.json) — a structured data file that powers the README. If you want to contribute, edit that file rather than the README directly.
+</Tip>
